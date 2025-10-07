@@ -1,0 +1,77 @@
+/* 
+    Resetando margens e preechimentos padrões de todos os elementos
+    definido
+
+*/
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilizando a tag <main> para usar flexbox 
+centralizando verticalmente os itens e espaçando-os horizontalmente*/
+
+main{
+display: flex;
+align-items: center; /* alinhar os itens verticalmente e ao centro */
+justify-content: space-around;
+padding: 0 200px 0 200px;
+}
+
+.imagem-cel-amarelo{
+width: 500px;
+margin-top: 50px;
+height: auto;
+object-fit: contain;
+}
+
+.imagem-cel-azul{
+width: 500px;
+margin-top: 50px;
+height: auto;
+object-fit: contain;
+}
+
+.imagem-cel-branco{
+width: 500px;
+margin-top: 50px;
+height: auto;
+object-fit: contain;
+}
+
+.imagem-cel-preto{
+width: 500px;
+margin-top: 50px;
+height: auto;
+object-fit: contain;
+}
+
+.imagem-cel-roxo{
+width: 500px;
+margin-top: 50px;
+height: auto;
+object-fit: contain;
+}
+
+.imagem-cel-vermelho{
+width: 500px;
+margin-top: 50px;
+height: auto;
+object-fit: contain;
+}
+
+.main .div-principal{
+flex: 1;
+max-width: 600px;
+padding-bottom: 10px;
+
+}
+
+.main .div-principal .h2{
+font-size: 30px;
+margin-bottom: 10;
+
+}
