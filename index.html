@@ -5,125 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logo.png"
-    <title> <img src="img/logo.png" alt="" width="20" height="20"> </title>
-    
-
+    <link rel="icon" href="Imagens/logo.png">
 </head>
+
 <body>
 
-<main> <!-- Elemento semântico que indica o conteudo principal da pagina
-            ajuda na acebilidade e o SEO - Coloque aqui o conteudo mais importantes--> 
+    <header class="header">
 
-<div class="div-principal"> <!-- div principal, conteiner que agrupa, titulo, descrição, preço, botões
-use classes para aplicar estilos via CSS -->
+        <section>
 
-    <h2> Iphone suas versões</h2> <!-- <h2> e <h3>  :
-    Cabeçalhos com ordens hierarquica. h2 é o titulo principal do bloco -->
+            <a href="#" class="logo">
 
-    <h3> O Atual celular das suas escolhas diarias😎</h3> <!-- Texto explicativo, pode ser lido por leitores de
-    tela-->
+                <img src="Imagens/logo.png" width="50" height="50" alt="logo"> 
 
-    <p> Em dois tamanhos perfeitos. Agora com um toque de amarelo.</p>
+            </a>
 
-    <h6> A partir de R$899.50/mês ou R$ 10.899</h6>
+            <nav class="navbar">
 
-    <button> Comprar !</button> <!-- Botão de Ação. Se estiver fora de um <form>, por padrão este botão não envia nada
-    Se estiver dentro de um <form> e não quiser submeter, usar type = "button"-->
+                <a href="#">Home</a>
+                <a href="#">Loja</a>
+                <a href="#">Mac</a>
+                <a href="#">Ipad</a>
+                <a href="#">Iphone</a>
+            </nav>
+        </section>
+    </header>
 
-<h5> Escolha sua cor.</h5>
+    <main>
+        <div class="div-principal">
+            <h2>Novo iPhone 17 e suas versões</h2>
+            <h3>Inovação que conecta você ao futuro.</h3>
+            <p>Em dois tamanhos perfeitos. Novas cores.</p>
+            <h6>A partir de R$ 899,50/mês ou R$ 10.899*</h6>
 
-<div class="opçoes-cores"> <!--Input radio div especifica:
-        type = "radio" cria opção exclusiva;
-        name = "cor" agrupa opções de cores
-        id = "amarelo" serve para associar o label
-        onclik chama a função javascript trocar imagem
--->
-    <input type="radio" name="cor" id="amarelo" onclick="TrocarImagem('iphone-amarelo.png')">
-    <label for="amarelo" class="cor cor-amarelo" ></label>
-    
-    <input type="radio" name="cor" id="azul" onclick="TrocarImagem('iphone-azul.png')">
-    <label for="azul" class="cor cor-azul" ></label>
- 
-    <input type="radio" name="cor" id="branco" onclick="TrocarImagem('iphone-branco.png')">
-    <label for="branco" class="cor cor-branco" ></label>
+            <button>Comprar</button>
 
-    <input type="radio" name="cor" id="preto" onclick="TrocarImagem('iphone-preto.png')">
-    <label for="preto" class="cor cor-preto" ></label>
+            <h5>Escolha sua cor:</h5>
+            <div class="opcoes-cores">
+                <input type="radio" name="cor" id="amarelo" onclick="trocar_imagem('iphone-amarelo.png')">
+                <label for="amarelo" class="cor-amarelo"></label>
 
-    <input type="radio" name="cor" id="roxo" onclick="TrocarImagem('iphone-roxo.png')">
-    <label for="roxo" class="cor cor-roxo" ></label>
+                <input type="radio" name="cor" id="azul" onclick="trocar_imagem('iphone-azul.png')">
+                <label for="azul" class="cor-azul"></label>
 
-    <input type="radio" name="cor" id="vermelho" onclick="TrocarImagem('iphone-vermelho.png')">
-    <label for="vermelho" class="cor cor-vermelho" ></label>
+                <input type="radio" name="cor" id="branco" onclick="trocar_imagem('iphone-branco.png')">
+                <label for="branco" class="cor-branco"></label>
 
-</div>
+                <input type="radio" name="cor" id="preto" onclick="trocar_imagem('iphone-preto.png')">
+                <label for="preto" class="cor-preto"></label>
 
+                <input type="radio" name="cor" id="roxo" onclick="trocar_imagem('iphone-roxo.png')">
+                <label for="roxo" class="cor-roxo"></label>
 
+                <input type="radio" name="cor" id="vermelho" onclick="trocar_imagem('iphone-vermelho.png')">
+                <label for="vermelho" class="cor-vermelho"></label>
+            </div>
+        </div>
 
+        <img id="iphone-img" class="imagem-cel" src="Imagens/iphone-azul.png" alt="iPhone Azul" />
+    </main>
 
-
-
-
-
-
-
-</div>
-
-
-<img id "iphone-img" class="imagem-cel-amarelo" src="img/iphone-amarelo.png"
-<img id "iphone-img" class="imagem-cel-azul" src="img/iphone-azul.png"
-<img id "iphone-img" class="imagem-cel-branco" src="img/iphone-branco.png"
-<img id "iphone-img" class="imagem-cel-preto" src="img/iphone-preto.png"
-<img id "iphone-img" class="imagem-cel-roxo" src="img/iphone-roxo.png"
-<img id "iphone-img" class="imagem-cel-vermelho" src="img/iphone-vermelho.png"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</main>
-
-<script> 
-/* Trocar Imagem(nomeImagem)
-1. Localiza o elemento <img> pelo id 
-2. fallback, define um manipulador de erro(onerror) que coloca uma imagem do fallback
-caso a imagem solicitada não existe
-3. Altera o atributo src para o novo caminho da imagem, dispara o carregamento pelo navegador
-*/
-
-function  TrocarImagem (nomeImagem) {
-    // Peça o elemento <img> que mostra o iphone
-    var img = document.getElementById("iphone-img");
-
-    img.onerror - function() {
-
-    // Aqui usamos "this" que aponta para o proprio elemento img.
-    this.src - './img/iphone-amarelo.png';
-
-    // Troca o src para o novo arquivo que o onclick pediu
-
-
-
-}
-
-
-
-}
-
-</script>
-
-
-
-
+    <script>
+        function trocar_imagem(nomeImagem) {
+            var img = document.getElementById("iphone-img");
+            img.src = "Imagens/" + nomeImagem;
+            img.onerror = function () {
+                this.src = "Imagens/iphone-azul.png";
+            };
+        }
+    </script>
 </body>
-</html> 
+</html>
