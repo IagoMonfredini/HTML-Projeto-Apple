@@ -56,3 +56,9 @@ Ao clicar em uma cor, a imagem principal é atualizada automaticamente.
 1. Faça o download ou clone este repositório:
    ```bash
    git clone https://github.com/usuario/apple-iphone17.git
+
+### 🧾 Licença
+Este projeto é de uso livre para fins educacionais e demonstração.
+Sinta-se à vontade para modificar e aprimorar conforme suas necessidades.
+
+Iago Monfredini - Coryright
